@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:title="Active Domain"
+        android:summary="Active domain goes here"
+        android:dialogTitle="Domain to which the app will connect to"
+        android:key="settings_domain"/>
+    <Preference
+        android:title="Clear Settings"
+        android:key="settings_clear"/>
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:fragment="me.zingmars.dankpressandroid.SettingsActivity$AccountPreferenceFragment"
+        android:title="@string/accountManage"
+        />
+    <header
+        android:fragment="me.zingmars.dankpressandroid.SettingsActivity$AppPreferencesFragment"
+        android:title="@string/appSettings"
+        />
+</preference-headers>

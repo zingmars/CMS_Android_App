@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="me.zingmars.dankpressandroid.comments_list">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_activity_comments_list"
+                android:layout_gravity="start"
+                android:id="@+id/toolbar_title"
+                android:textIsSelectable="false"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingTop="8sp"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingTop="60dp">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/listView2"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/NoComments"
+            android:id="@+id/textView6"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="120sp"
+            android:id="@+id/editText"
+            android:layout_alignTop="@+id/listView2"
+            android:layout_alignParentEnd="false"
+            android:inputType="text"
+            android:layout_toEndOf="@+id/textView6"
+            android:layout_alignParentStart="true"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Save"
+            android:id="@+id/button3"
+            android:visibility="invisible"
+            android:layout_below="@+id/editText"
+            android:layout_toEndOf="@+id/textView6"
+            android:layout_marginStart="80dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Delete"
+            android:id="@+id/button4"
+            android:layout_below="@+id/editText"
+            android:layout_toEndOf="@+id/button3"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

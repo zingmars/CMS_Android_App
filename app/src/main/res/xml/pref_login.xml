@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/accountsettings"
+    android:summary="@string/acountsettingsdescription">
+    <Preference
+        android:title="@string/login"
+        android:key="settings_login">
+    </Preference>
+    <Preference
+        android:title="@string/logout"
+        android:key="settings_logout">
+    </Preference>
+</PreferenceScreen>

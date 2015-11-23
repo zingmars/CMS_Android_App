@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/PostTitle"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0"
+        android:autoText="false"
+        android:editable="false"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/GoBack"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0"
+        android:enabled="true"
+        android:visibility="gone"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_alignTop="@+id/comments" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:name="me.zingmars.dankpressandroid.Post_Comments"
+        android:id="@+id/comments"
+        android:layout_gravity="center_horizontal|bottom"
+        tools:layout="@layout/fragment_post__comments"
+        class="me.zingmars.dankpressandroid.Post_Comments"
+        android:layout_weight="0.27"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="false" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/editText2"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:visibility="invisible"
+        android:inputType="text"
+        android:imeOptions="flagNoFullscreen"
+        android:layout_above="@+id/comments"
+        android:layout_toEndOf="@+id/button"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="@string/NewComment"
+        android:id="@+id/button5"
+        android:layout_gravity="center_horizontal|bottom"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal|top"
+        android:textSize="20sp"
+        android:text="@string/Loading"
+        android:maxLines="100"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentEnd="false"
+        android:layout_above="@+id/editText2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/button6"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/button5"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/button5" />
+
+</RelativeLayout>

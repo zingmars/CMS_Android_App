@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Dankpress</string>
+
+    <!-- Strings related to Posts -->
+    <string name="Loading">Loading&#8230; Please wait.</string>
+    <string name="DownloadError">Error while downloading the RSS feed. Please restart or reconfigure the app.</string>
+    <string name="PostTitle">Title goes here</string>
+    <string name="GoBack">Go back</string>
+    <string name="NoPosts">The remote server does not have any posts.</string>
+
+    <!-- Strings related to Login -->
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- Strings related to Settings -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
+    <string name="accountManage">Account management</string>
+    <string name="accountsettings">Account settings</string>
+    <string name="acountsettingsdescription">Log in or log out with a Dankpress account.</string>
+    <string name="activeServer">Active server</string>
+    <string name="appSettings">App Settings</string>
+    <string name="settingsCleared">Settings cleared! Going to main screen.</string>
+    <string name="domainChanged">"Success. This app will now get posts from: "</string>
+
+    <!-- Strings related to Comments -->
+    <string name="comments">Comments</string>
+    <string name="NoComments">No Comments</string>
+    <string name="InternalError">Internal error</string>
+    <string name="title_activity_comments_list">Comments List</string>
+    <string name="NoComment">No Comment</string>
+    <string name="comment_edit_title">Edit a comment</string>
+    <string name="Save">Save</string>
+    <string name="Delete">Delete</string>
+    <string name="NewComment">New Comment</string>
+    <string name="Cancel">Cancel</string>
+</resources>
+
