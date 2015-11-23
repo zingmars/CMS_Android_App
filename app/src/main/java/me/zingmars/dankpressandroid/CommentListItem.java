@@ -66,7 +66,7 @@ public class CommentListItem extends BaseExpandableListAdapter {
         Button ed = (Button) convertView.findViewById(R.id.button8);
         if(editableState.get(groupPosition).equals(1)) {
             del.setVisibility(View.VISIBLE);
-            ed.setVisibility(View.VISIBLE);
+            //ed.setVisibility(View.VISIBLE);
 
             del.setOnClickListener(new View.OnClickListener() {
                 @Override
