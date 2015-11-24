@@ -38,7 +38,7 @@ public class PostActivity extends AppCompatActivity implements Post_Comments.OnF
         public void run() {
             try {
                 //Get the post
-                final String line = App.HTMLGET(domain+"/api/post/"+id);
+                final String line = App.HTMLGET(domain+"/API/post/"+id);
 
                 //Display it
                 runOnUiThread(new Runnable() {
@@ -100,7 +100,7 @@ public class PostActivity extends AppCompatActivity implements Post_Comments.OnF
                                                     params.add(entryToken);
                                                     params.add(comment);
 
-                                                    String newUser = App.HTMLPOST(domain+"/api/addComment/"+postID, params);
+                                                    String newUser = App.HTMLPOST(domain+"/API/addComment/"+postID, params);
                                                     if (newUser != null && !newUser.equals("400 Bad Request")) {
                                                         // Refresh
                                                         comments.refreshComments();

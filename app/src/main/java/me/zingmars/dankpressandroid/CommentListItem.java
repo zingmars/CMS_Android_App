@@ -12,7 +12,6 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -84,7 +83,7 @@ public class CommentListItem extends BaseExpandableListAdapter {
                     Runnable DL = new Runnable() {
                         @Override
                         public void run() {
-                            String removeComment = App.HTMLPOST(Domain + "/api/removeComment/" + commentID, params);
+                            String removeComment = App.HTMLPOST(Domain + "/API/removeComment/" + commentID, params);
                             // Remove it from the list
                             if(removeComment != null && removeComment.equals("Success")) {
                                 context.runOnUiThread(new Runnable() {
@@ -133,7 +132,7 @@ public class CommentListItem extends BaseExpandableListAdapter {
                                 Runnable DL = new Runnable() {
                                     @Override
                                     public void run() {
-                                        String editCommentResponse = App.HTMLPOST(Domain + "/api/editComment/" + commentID, params);
+                                        String editCommentResponse = App.HTMLPOST(Domain + "/API/editComment/" + commentID, params);
                                         if(editCommentResponse != null && editCommentResponse.equals("Success")) {
                                             item.setText(editComment.getText().toString());
                                         } else {

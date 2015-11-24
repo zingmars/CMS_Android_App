@@ -47,7 +47,7 @@ public class CommentsActivity extends AppCompatActivity {
                     ShortPostText.clear();
 
                     if(!userID.equals("")) {
-                        String userCommentsJson = App.HTMLPOST(Domain+"/api/getUserComments/"+userID, params);
+                        String userCommentsJson = App.HTMLPOST(Domain+"/API/getUserComments/"+userID, params);
 
                         if(userCommentsJson != null && !userCommentsJson.equals("[]") && !userCommentsJson.equals("400 Bad Request")) {
                             JSONArray comments = new JSONArray(userCommentsJson);
@@ -161,7 +161,7 @@ public class CommentsActivity extends AppCompatActivity {
                                 Runnable DL = new Runnable() {
                                     @Override
                                     public void run() {
-                                        String postEdit = App.HTMLPOST(Domain + "/api/editComment/" + commentID, params);
+                                        String postEdit = App.HTMLPOST(Domain + "/API/editComment/" + commentID, params);
 
                                         // Hide Edit
                                         runOnUiThread(new Runnable() {
@@ -213,7 +213,7 @@ public class CommentsActivity extends AppCompatActivity {
                                 Runnable DL = new Runnable() {
                                     @Override
                                     public void run() {
-                                        String removeComment = App.HTMLPOST(Domain + "/api/removeComment/" + commentID, params);
+                                        String removeComment = App.HTMLPOST(Domain + "/API/removeComment/" + commentID, params);
 
                                         runOnUiThread(new Runnable() {
                                             @Override

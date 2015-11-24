@@ -3,8 +3,7 @@ package me.zingmars.dankpressandroid;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.app.Activity;
-import android.content.Intent;
+import android.os.Looper;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -242,6 +241,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         protected Boolean doInBackground(Void... params) {
             try {
                 //Login
+                Looper.prepare();
+                Toast logintoast = Toast.makeText(App.getAppContext(), "Attempting a login", Toast.LENGTH_SHORT);
+                logintoast.show();
                 Utilities utils = new Utilities();
                 return utils.login(mEmail, mPassword);
             } catch (Exception e) {
@@ -257,8 +259,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             if (success) {
                 Toast toast = Toast.makeText(App.getAppContext(), "Login successful!", Toast.LENGTH_SHORT);
                 toast.show();
-                Intent mainActivity = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(mainActivity);
+                //Intent mainActivity = new Intent(LoginActivity.this, MainActivity.class);
+                //startActivity(mainActivity);
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

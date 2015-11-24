@@ -5,7 +5,6 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
@@ -192,6 +191,7 @@ public class App extends Application {
             connection.setRequestMethod("POST");
             connection.setRequestProperty("Content-Type",
                     "application/x-www-form-urlencoded");
+            connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Android 6.0; rv:40.0) Gecko/20100101 Firefox/40.0");
 
             String query = getQuery(params);
             connection.setFixedLengthStreamingMode(query.getBytes().length);

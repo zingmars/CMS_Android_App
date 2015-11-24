@@ -18,7 +18,6 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.net.URL;
-import java.util.AbstractMap;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
         //Get posts
         Log.i(TAG, "Downloading post list.");
         RefreshPosts(false);
+
+        //TODO: Fix login
+        //TODO: Log out when switching servers (and don't do anything if the server remained unchanged; remove trailing spaces from the url)
+        //TODO: Close the Settings view instead of dropping to home view when server is changed
+        //TODO: Error message when trying to log in to the wrong server
+        //TODO: Fix graphical glitches when there are no comments
 
         //TODO: Refactor the code
     }

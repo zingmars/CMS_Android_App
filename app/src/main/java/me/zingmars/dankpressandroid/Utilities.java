@@ -4,16 +4,6 @@
 package me.zingmars.dankpressandroid;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -56,7 +46,7 @@ public class Utilities {
             AbstractMap.SimpleEntry<String, String> token = new AbstractMap.SimpleEntry<>("token", preferences.getString("token", ""));
             params.add(username);
             params.add(token);
-            String response = App.HTMLPOST(App.Prefs().getString("domain", "")+"/api/logout", params);
+            String response = App.HTMLPOST(App.Prefs().getString("domain", "")+"/API/logout", params);
             //TODO: Redo, this whole thing is flawed.
             if(response.equals("Logout successful")) {
                 final SharedPreferences.Editor editor = preferences.edit();
@@ -78,7 +68,8 @@ public class Utilities {
         AbstractMap.SimpleEntry<String, String> entryPassword = new AbstractMap.SimpleEntry<>("password", password);
         params.add(entryUsername);
         params.add(entryPassword);
-        String response = App.HTMLPOST(App.Prefs().getString("domain", "")+"/api/login", params);
+
+        String response = App.HTMLPOST(App.Prefs().getString("domain", "")+"/API/login/", params);
 
         if(response == null) return false;
         else {
