@@ -1,6 +1,6 @@
 # Dankpress app
 
-Android client for <https://www.zingmars.info/blog/>, also known as my very own "Hello World" app for Android. It's quite unfinished (and I don't intend to ever finish it since it was a homework assignment), and only has basic functionality -
+Android client for a CMS I wrote in CakePHP. You could say this is my "Hello World" app for Android. It's quite unfinished (and I don't intend to ever finish it since it was a homework assignment), and only has basic functionality -
 
 * Get post feed
 * Log in/out
